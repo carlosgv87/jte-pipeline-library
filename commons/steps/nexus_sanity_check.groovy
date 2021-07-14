@@ -13,7 +13,6 @@ void call(String operation, String pipelineType, app_data, repository_data) {
                 errorMessageMKD = "**Nexus Sanity Check has FAILED**:  \n - Docker image **'${dockerImageFullName}' IS NOT PRESENT in Nexus**.  \n - Please **check in Jenkins if the '${dockerImage}' job which should have published version '${versionToDeploy}' to Nexus has finished successfully**"
             }
             break
-
         case 'webapp':
             def packageName = app_data.name
             versionToDeploy = app_data.version
