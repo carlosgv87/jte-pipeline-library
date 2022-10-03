@@ -1,4 +1,5 @@
 void call(String operation, String pipelineType, app_data, repository_data) {
+    log.debug("nexus_sanity_check")
     def errorMessage = ""
     def errorMessageMKD = ""
     def versionToDeploy = ""
