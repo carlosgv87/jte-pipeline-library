@@ -14,5 +14,5 @@ void call(String appName) {
      - Security.Vulnerabilities.High: ${highVulnerabilities}
      - Security.Vulnerabilities.VeryHigh: ${veryHighVulnerabilities}
      - Security.Vulnerabilities.Total: ${totalVulnerabilities}
-    Analysis result: ${kiuwanAnalysisResultsOutputFileJSON.analysisURL}"""
+    """
 }
