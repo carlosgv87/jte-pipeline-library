@@ -29,8 +29,8 @@ void call(app_data) {
         ])
     }
     dockerBuilds.each { dockerBuild ->
-        def imageTag = "${OB_REPO_DOCKER}/obkesp/${dockerBuild.name}:${dockerBuild.tag}"
-        def deprecatedImageTag = "${OB_REPO_DOCKER}/${dockerBuild.name}:${dockerBuild.tag}"
+        def imageTag = "obkesp/${dockerBuild.name}:${dockerBuild.tag}"
+        def deprecatedImageTag = "${dockerBuild.name}:${dockerBuild.tag}"
         def extraBuildArgs = dockerBuild.buildArgs ? dockerBuild.buildArgs.collect { '--build-arg ' + it }.join(' ') : ''
         log.info("Building Docker image using Docker")
         //sh "docker build --build-arg OB_NPM_REGISTRY_TOKEN --build-arg OB_REPO_USER --build-arg OB_REPO_PASS ${extraBuildArgs} -t ${imageTag} -t ${deprecatedImageTag} ${dockerBuild.path}"
